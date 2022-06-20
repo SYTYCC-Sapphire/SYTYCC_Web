@@ -1,0 +1,25 @@
+#!/bin/bash
+
+BUILD_DIR=$1
+
+### AngularPay Service Directories ##
+BASE_DIR="gpi/websites"
+APP_DIR="${BASE_DIR}/${BUILD_DIR}"
+
+
+if [ ! -d "$BASE_DIR" ];
+then 
+	echo "$BASE_DIR does not exist! Creating it..."
+	mkdir -p "$BASE_DIR"
+else
+	echo "$BASE_DIR already exist. Moving on..."
+fi
+if [ ! -d "$APP_DIR" ];
+then 
+	echo "$APPDIR does not exist! Creating it..."
+	mkdir -p "$APP_DIR"
+else
+	echo "$APP_DIR already exist. Moving on..."
+fi
+
+
