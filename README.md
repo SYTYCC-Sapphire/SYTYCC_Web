@@ -1,9 +1,3 @@
-<style>
-  H1 { color: Blue !important; }
-  H3 { color: Cornflowerblue !important; }
-  a { color: Firebrick !important; }
-</style>
-
 ## SYTYCC_Web
 
 
