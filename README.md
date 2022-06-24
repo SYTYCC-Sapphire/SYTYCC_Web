@@ -1,12 +1,14 @@
 ## SYTYCC_Web
-
-
+<br />
+So You Think You Can Code (SYTYCC) Web, is a website developed for a community of tech-savvies learning, growing and working together on real world projects. 
 <br />
 <br />
 
-### Rules for Contributing
+### Guide for Contributing
 <br />
-For effective contributions, please follow these instructions. If there are more guideslines you wish to add to spice things abit, please contact the appropraite lead or CTO.
+For effective contributions, please follow these instructions; If you wish to add more guideslines and spice things abit, please contact the appropraite lead or CTO.
+
+Previous contributors should can switch to the current organization repository using `git remote set-url origin *new_url*` 
 <br />
 
 - Create a personal fork of the project on Github.
