@@ -317,7 +317,7 @@ a{
 .btn-transp-arrow.btn-primary.active, .btn-transp-arrow.btn-primary:active,
 .btn-transp-arrow.btn-primary:hover{
     background-color: transparentize($black, 0.95);
-    color: $black;
+    color: red;
     box-shadow: none;
 }
 /* subscription form */

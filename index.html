@@ -51,6 +51,7 @@
   <link rel="stylesheet" href="./js/vendor/swiper.min.css">
   <link rel="stylesheet" href="./js/vendor/jquery.fullpage.min.css">
   <link rel="stylesheet" href="./js/vegas/vegas.min.css">
+  <link rel="stylesheet" href="./register/style.css">
 
   <!-- Main CSS files -->
   <link rel="stylesheet" href="./css/main.css">
@@ -59,6 +60,9 @@
   <link rel="stylesheet" href="./css/style-default.css">
 
   <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
+
+  <script src="./register/register.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body id="menu" class="body-page">
@@ -133,6 +137,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./demo.html">Demo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./register.html">Register</a>
           </li>
         </ul>
       </nav>
@@ -881,7 +888,7 @@
     
     <!-- End of list products section -->
     <!-- Begin of register/login/signin section -->
-    <div class="section section-register fp-auto-height-responsive " data-section="register">
+    <div class="section section-register fp-auto-height-responsive " data-section="register" id="reg">
 
       <!-- Begin of section wrapper -->
       <div class="section-wrapper fullwidth fullheight center-lg-v with-margin margin-topbottom">
@@ -893,12 +900,13 @@
 
             <div class="col-12 col-md-12 col-lg-5">
               <!-- Registration form container-->
-              <form class="send_email_form form-container form-container-transparent form-container-white" method="post"
-                action="ajaxserver/serverfile.php">
+              <form class="send_email_form form-container form-container-transparent form-container-white form-wrapper" method="post"
+                action="#">
                 <div class="form-desc">
-                  <h2 class="display-4 display-title  anim-2">Subscribe</h2>
-                  <p class="invite  anim-3">Don't miss any new opportunity, Hurry up! register now :</p>
+                  <h2 class="display-4 display-title  anim-2">Sign Up</h2>
+                  <p class="invite  anim-3 " id="sytycc">Be a part of community of developers | Boost your career!</p>
                 </div>
+                      
                 <div class="form-input  anim-4">
                   <div class="form-group form-success-gone">
                     <label for="reg-email">Email</label>
@@ -914,11 +922,12 @@
                     <div class="btns-action anim-3">
                       <button id="submit-email" name="submit_email"
                         class="btn btn-underline btn-primary form-success-gone">
-                        <span class="text">Subscribe</span>
+                        <span class="text">Join Now</span>
                         <span class="icon">
                           <i class="ion ion-checkmark"></i>
                         </span>
                       </button>
+                      <span class="text a-member">already a member? <span style="color: red; font-size: 16px;"><a id="login_link" href="#">Login</a> </span></span>
                     </div>
                   </div>
                 </div>
@@ -951,8 +960,36 @@
             </a>
           </div>
         </div>
+        <div class="modal-login" id="login-form-container" >
 
+          <div id="inner-login-form-container">
+            <h1>Sign In</h1>
+            <form id="login-form" action="post">
+              <input type="email" name = "email" id="email" class="login-input" placeholder="john@mail.com">
+              <input type="text" name="password" class="login-input" id="password" placeholder="password">
+              <button type="submit" id="login-btn">Login</button>
+            </form>
+            <a href="#">forgot password?</a>
+          </div>
+        </div>
       </div>
+
+      <script>
+        var login = document.getElementById("login-form-container");
+        var page_wrapper = document.getElementById("reg");
+        // login.style.display= "none";
+        $("#login-form-container").hide();
+
+        $('#login_link').click(function(e) {
+        e.preventDefault();  
+        // login.style.display = "block";
+        $("#login-form-container").show();
+
+    } )
+
+  
+  
+      </script>
       <!-- End of section wrapper -->
 
       <!-- Arrows scroll down/up -->
@@ -966,6 +1003,7 @@
         </a>
       </footer>
     </div>
+    
     <!-- End of register/login/signin section -->
 
     <!-- Begin of contact section -->
